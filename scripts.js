@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             smoothScrollTo(targetSection);
 
+            // Update active state
+            navLinks.forEach((navLink) => navLink.classList.remove('active'));
+            e.target.classList.add('active');
+
             // Hide all sections
             sections.forEach((section) => {
                 section.style.display = 'none';
@@ -58,4 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             fadeIn(targetSection);
         });
     });
+
+    
 });
